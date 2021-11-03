@@ -12,14 +12,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!--ссылка на дизайн текста, берем ссылку в гуггл фонтс -->
 </head>
+<style>
+  h1 { color: blueviolet;
+      text-align: center;}
+</style>
+<!-- сокращенно можем добавить цвет и выравнивания, не добавляя в строчку н1 отдельно, 
+  чтобы сделать код чище и не дублировать информацию, дальше если хотим применить этот стиль
+ко всем страницам еще упрощаем действия, а именно удаляем эти строки и переносим их в файл стили, привязывая 
+файл и добавляя сюда строку <link rel ="stylesheet" href="styles.css"]]]]]]]]] border collapse -  сливает границы таблицы------ 
+марджин отсуп снаружи, а падинг отступ внутри >-->
+
+<style>
+  table{
+    border: 3px solid; color: black;
+    border-collapse: collapse; 
+  }
+  td, th {
+    border: 3px solid; color: black;
+    padding: 5px;
+  }
+  button{
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    background-color: green;
+  }
+  button:hover {
+    background-color: orange;
+  }
+</style>
 <body>
   <!--тело, то что будет высвечиваться на сайтах -->
-    <h1>Адвокатское обьединение Мурочка и партнеры</h1>
+    <h1 style="color:blueviolet; text-align: center;">Адвокатское обьединение Мурочка и партнеры</h1>
     <!--заголовок расшифровка тега h1, h - heading (заголовок), 1 (первый, наибольший за размером)-->
-    <h2>Посадим не только на бутылку, но и в тюрьму...</h2>
+    <!--text - align: center - это выравнивание в центре. Если убрать его и перемистить в тело, то 
+    оно застосуеться ко всем элементам-->
+    <h1>наш девиз</h1> 
+    <h2 style="color: rgb(34, 194, 235);">Посадим не только на бутылку, но и в тюрьму...</h2>
     <!--h2 (второй заголовок, но поменьше, и так до h6 - это самый маленький заголовок)-->
-    <img src="images/photo5190479990695770245.jpg" alt="мурон"
+    <!--если хотим добавить цвет т т.д. на страницу добавляем в строку style="color: -->
+    <img src="images/photo5190479990695770245.jpg" alt="мурон" width="500">
+    <!--src это source тоесть джерело, откуда берем изображение -->
     <!-- ссылка на картинку, а  алт - это текстовый выриант если не загрузится -->
+   
     Манифест обьединения:
     <ol>
       <li>Открытое - закрыть </li>
@@ -36,8 +71,70 @@
   <li>мыслителей</li>
   <li>строителей</li>
 </ul>
+<!--невпорядкованый список, тоесть без цифр это тег ul, тоесть unordered list -->
 <p>работающих вместе ... </p>
 <p> PS. Цытаты великой Мурочки...</p>
+<a href="https://www.google.com">Хочешь в Европку? Жми на цю кнопку</a>
+
+
+
+<!--тег а - означает ancore (якорь) используется для создания ссылки, у него есть атрибут href= указывает 
+  на какую страницу здийснювати посилання
+-->
+<table> <!-- тег table представляет таблицу-->
+  <thead> <!-- тег thead в тадлице, означает заголовки таблиц-->
+<tr>
+  <th>Океан</th>
+  <th>Средняя глубина</th>
+  <th>Максимальная глубина</th>                      
+<!-- тег th означает заголовки таблиц-->
+</tr>      
+
+  </thead>
+  <tbody>
+      <tr> <!-- тег tr означает ряд таблицы-->
+        <td>Тихий Океан</td> <!--тег td данные таблицы-->
+        <td> 4280 m</td>
+        <td> 10.911 m</td>
+      </tr> 
+      <tr>
+        <td>Атлантический Океан</td>
+        <td>3.646 m</td>
+        <td>8.486 m</td>
+      </tr>
+  </tbody>
+</table>
+
+<form>
+  <div> <!--тег div это контейнер для стилизации блоков, по сути сам ничего не означает -->
+  <input type="text" placeholder="Введите, Ваше имя" name="name">
+  <input name="password" type="password" placeholder="пароль">
+  <input type="submit"> <!--submit - это кнопка отправить-->
+  </div>
+
+  <div> 
+    Какой ваш любимый цвет?
+    <input name="color" type="radio" value="red"> Красный
+    <input name="color" type="radio" value="green"> Зеленый
+    <input name="color" type="radio" value="blue"> Голубой
+    <input name="color" type="radio" value="other"> Другой
+  </div>
+   
+  <div>
+    <input name="country" list="countries" placeholder="Страна">
+    <datalist id="countries"  option value="Украина"></datalist>
+     
+    
+  </div>
+      
+
+  
+
+<!-- тег input означает ввод, тип текст будет, можно сделать выпадающий список и т.д.
+  placeholder это указатель. name это названия поля ввода-->
+</form>
+
+<button>Нажми сюда</button>
 
 <script src="scripts/main.js"></script>
 </body>
