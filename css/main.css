@@ -125,7 +125,7 @@ header.fixed #logo {
     }
 }
 
-40вая минута видео*/
+/*40вая минута видео*/
 #top h1{
     padding-top: 20%;
 }
@@ -217,7 +217,7 @@ header.fixed #logo {
 }
 
 
-@media (max-width::700px) {
+@media (max-width:700px) {
     #overview.img {
         width: 80%!important;
         margin-right: 0!important;
